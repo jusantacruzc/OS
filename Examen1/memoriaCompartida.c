@@ -71,3 +71,31 @@ int main(){
 
     return 0;
 }
+/*
+Abrir PowerShell → ejecutar `wsl`
+
+Navegar al directorio:
+
+```c
+// Ver archivos
+ls
+
+// Entrar a una carpeta
+cd nombre
+
+// Volver atras
+cd ..
+```
+
+Compilar:
+
+```c
+gcc archivo.c -o programa
+```
+
+Ejecutar:
+
+```c
+./programa
+```
+*/
