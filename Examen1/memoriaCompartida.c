@@ -18,7 +18,9 @@ int main(){
     // Crear un segmento de memoria compartida
     // shmget crea (o accede) a un segmento de memoria de tamaño sizeof(ld)
     // IPC_CREAT indica que se cree si no existe
-    shmid = shmget(key, sizeof(ld), IPC_CREAT);
+    shmid = shmget(key, sizeof(ld), IPC_CREAT | 0666);
+    
+    //shmid = shmget(key, sizeof(ld), IPC_CREAT) ;
 
     // Vincular el segmento de memoria compartida al espacio de direcciones del proceso
     sharedPi = (ld*) shmat(shmid, NULL, 0);
@@ -99,3 +101,4 @@ Ejecutar:
 ./programa
 ```
 */
+
